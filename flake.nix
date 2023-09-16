@@ -1,4 +1,4 @@
-# To rebuild: sudo nixos-rebuild switch --flake .#michael
+# To rebuild: sudo nixos-rebuild switch --flake .#bigsad
 
 {
   description = "My system configuration and home manager";
@@ -43,7 +43,7 @@
               home-manager.extraSpecialArgs = { inherit inputs; };
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.michael = {
+              home-manager.users.bigsad = {
                 imports = [ 
                   ./home.nix
                   ./desktop_environments/kde/home.nix ];
@@ -65,7 +65,7 @@
               home-manager.extraSpecialArgs = { inherit inputs; };
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.michael = {
+              home-manager.users.bigsad = {
                 imports = [ 
                   ./home.nix
                   ./desktop_environments/gnome/home.nix ];

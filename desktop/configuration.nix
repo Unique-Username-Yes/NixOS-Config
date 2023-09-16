@@ -11,19 +11,4 @@
     layout = "gb";
     xkbVariant = "";
   };
-
-  boot.initrd.kernelModules = [ "amdgpu" ];
-  hardware.opengl = {
-    # Mesa
-    enable = true;
-
-    # Vulkan
-    driSupport = true;
-  };
-
-  environment = {
-    variables = {
-      MANGOHUD_CONFIG = "no_display"; # Hide mangohud on startup
-    };
-  };
 }

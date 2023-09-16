@@ -10,7 +10,7 @@
       enableCompletion = true;
       enableAutosuggestions = true;
       syntaxHighlighting.enable = true;
-      initExtra = ''eval "$(direnv hook zsh)"'';
+      initExtra = ''eval "$(direnv hook zsh)"; PROMPT=\"%n@%m%#\"'';
       oh-my-zsh = {
         enable = true;
         plugins = [ "git" ];
@@ -76,12 +76,6 @@
           publisher = "ms-vscode";
           version = "1.15.31";
           sha256 = "sha256-GwNSpgQe8/rdYAsGvUUFS7LLRR1RkjEdu8f7ArhCimU=";
-        }
-        {
-          name = "rust-analyzer";
-          publisher = "rust-lang";
-          version = "0.4.1652";
-          sha256 = "0ilq6pqb5ajfnwb0a6wpcixxkrw3dcvk5na5zim0gp86q0c8xw9i";
         }
         {
           name = "clang-tidy";
@@ -155,7 +149,7 @@
 
     # Home Manager needs a bit of information about you and the
     # paths it should manage.
-    username = "michael";
-    homeDirectory = "/home/michael";
+    username = "bigsad";
+    homeDirectory = "/home/bigsad";
   };
 }
