@@ -30,35 +30,13 @@
       };
 
       nixosConfigurations = {
-        nix-desktop = nixpkgs.lib.nixosSystem {
-          specialArgs = { inherit inputs; };
-          modules = [
-            ./configuration.nix
-            ./desktop/hardware-configuration.nix
-            ./desktop/configuration.nix # desktop specific configuration
-            ./desktop_environments/kde/configuration.nix # KDE desktop environment
-
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.extraSpecialArgs = { inherit inputs; };
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-              home-manager.users.bigsad = {
-                imports = [ 
-                  ./home.nix
-                  ./desktop_environments/kde/home.nix ];
-              };
-            }
-          ];
-        };
-
         nix-laptop = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs; };
           modules = [
             ./configuration.nix
             ./laptop/hardware-configuration.nix
             ./laptop/configuration.nix # laptop specific configuration
-            ./desktop_environments/gnome/configuration.nix # Gnome desktop environment
+            ./desktop_environments/i3/configuration.nix # Gnome desktop environment
 
             home-manager.nixosModules.home-manager
             {
@@ -68,7 +46,7 @@
               home-manager.users.bigsad = {
                 imports = [ 
                   ./home.nix
-                  ./desktop_environments/gnome/home.nix ];
+                ];
               };
             }
           ];

@@ -25,6 +25,7 @@
       lsd
       bat
       ripgrep
+      kitty
     ];
   };
 
